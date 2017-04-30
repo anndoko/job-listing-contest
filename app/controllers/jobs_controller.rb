@@ -19,9 +19,10 @@ class JobsController < ApplicationController
   def show
     @job = Job.find(params[:id])
 
-    if @job.is_hidden
-      flash[:warning] = "This Job has been archived already."
-      redirect_to root_path
+    # google map
+    @hash = Gmaps4rails.build_markers(@job) do |job, marker|
+      marker.lat job.latitude
+      marker.lng job.longitude
     end
   end
 
@@ -92,7 +93,7 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden, :city, :company, :category)
+    params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden, :city, :company, :category, :address, :latitue, :longitude)
   end
 
   protected
