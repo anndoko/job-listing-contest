@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="col-md-12">
     <section id="job-info">
-      
+
       <!-- starred / star -->
       <div>
         <% if current_user && current_user.is_follower_of?(@job) %>
@@ -24,26 +24,27 @@
 
       <!-- location and salary -->
       <p class="details">
-        <i class="fa fa-location-arrow fa-fx" aria-hidden="true"></i>
-        <%= @job.city %>
-
         <i class="icon fa fa-usd fa-fx" aria-hidden="true"></i>
         <%= @job.wage_lower_bound / 1000 %> K -
         <%= @job.wage_upper_bound / 1000 %> K
+
+        <p class="address">
+          <i class="fa fa-location-arrow fa-fx" aria-hidden="true"></i>
+          <%= @job.address %>
+        </p>
       </p>
 
       <!-- description -->
-      <p>
-        <%= simple_format(@job.description) %>
+      <p class="description">
+        <%= @job.description %>
       </p>
 
-      <hr>
-
+      <br>
       <div>
         <%= simple_form_for [@job, @resume] do |f| %>
           <%= f.input :content, :label => t('f_content') %>
           <%= f.input :attachment, :label => t('f_attachment') %>
-          <%= f.submit t('f_send') %>
+          <%= f.submit t('f_send'), class: 'btn btn-lg btn-danger button_highlight' %>
         <% end %>
       </div>
   </div>

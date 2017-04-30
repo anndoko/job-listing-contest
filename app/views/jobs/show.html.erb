@@ -22,22 +22,25 @@
         <%= @job.title %>
       </div>
 
+
+
       <!-- location and salary -->
       <p class="details">
         <i class="icon fa fa-usd fa-fx" aria-hidden="true"></i>
         <%= @job.wage_lower_bound / 1000 %> K -
         <%= @job.wage_upper_bound / 1000 %> K
+
+        <p class="address">
+          <i class="fa fa-location-arrow fa-fx" aria-hidden="true"></i>
+          <%= @job.address %>
+        </p>
       </p>
 
       <!-- description -->
-      <p>
-        <%= simple_format(@job.description) %>
+      <p class="description">
+        <%= @job.description %>
       </p>
 
-      <p>
-        <i class="fa fa-location-arrow fa-fx" aria-hidden="true"></i>
-        <%= @job.address %>
-      </p>
 
       <!-- show google map -->
       <div id="map"></div>
@@ -55,10 +58,13 @@
       </script>
 
 
+
+
       <!-- submit resume -->
       <div class='button'>
         <%= link_to(t('btn_resume'), new_job_resume_path(@job), class: 'btn btn-lg btn-danger button_highlight') %>
       </div>
+
 
   </div>
 </div>
