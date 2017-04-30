@@ -14,7 +14,7 @@ class ResumesController < ApplicationController
 
     if @resume.save
       flash[:notice] = "Resume submitted successfully!"
-      redirect_to jobs_path
+      redirect_to root_path
     else
       render :new
     end
