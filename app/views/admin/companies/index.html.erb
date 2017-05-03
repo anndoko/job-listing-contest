@@ -20,7 +20,11 @@
         <%= company.title %>
       </td>
       <td>
-        <%= company.image %>
+        <% if company.image.present? %>
+          <%= image_tag(company.image.thumb.url, class: "thumbnail") %>
+        <% else %>
+          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+        <% end %>
       </td>
       <td>
         <%= company.location %>

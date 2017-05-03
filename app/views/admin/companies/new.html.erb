@@ -1,7 +1,8 @@
 <h1><%= t('hd_new_company') %></h1>
 
 <%= simple_form_for [:admin, @company ] do |f| %>
-  <%= f.input :image, :label => t('f_company_image') %>
+  <%= f.input :image, as: :file, :label => t('f_company_image')  %>
+  <!-- <%= f.input :image, :label => t('f_company_image') %> -->
   <%= f.input :title, :label => t('f_company_title') %>
   <%= f.input :location, :label => t('f_company_location') %>
   <%= f.submit t('f_submit') %>
