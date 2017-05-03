@@ -7,29 +7,33 @@
 <table class="table table-boldered table-striped custab" >
   <thead>
       <tr>
-        <td><%= t('th_company_image') %></td>
-        <td><%= t('th_company_title') %></td>
-        <td><%= t('th_company_location') %></td>
-        <td><%= t('th_manage') %></td>
+        <th width="50">#</th>
+        <th width="80"><%= t('th_company_image') %></th>
+        <th width="80"><%= t('th_company_title') %></th>
+        <th width="200"><%= t('th_company_location') %></th>
+        <th width="100"><%= t('th_manage') %></th>
       </tr>
   </thead>
 
   <% @companies.each do |company| %>
     <tr>
-      <td>
-        <%= company.title %>
+      <td style="vertical-align:middle">
+        <%= company.id %>
       </td>
       <td>
         <% if company.image.present? %>
-          <%= image_tag(company.image.thumb.url, class: "thumbnail") %>
+          <%= image_tag(company.image.thumb.url, class: "thumbnail logo-tiny") %>
         <% else %>
           <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
         <% end %>
       </td>
-      <td>
+      <td style="vertical-align:middle">
+        <%= company.title %>
+      </td>
+      <td style="vertical-align:middle">
         <%= company.location %>
       </td>
-      <td>
+      <td style="vertical-align:middle">
           <%= link_to(t('btn_edit'), edit_admin_company_path(company)) %>
           |
           <%= link_to(t('btn_delete'), admin_company_path(company), :method => :delete, :data => { :confirm => 'Are you sure?' }) %>

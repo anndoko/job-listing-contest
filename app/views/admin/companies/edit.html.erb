@@ -3,7 +3,7 @@
 <%= simple_form_for [:admin, @company ] do |f| %>
 
   <% if @company.image.present? %>
-    <%= image_tag(@company.image.thumb.url) %>
+    <%= image_tag(@company.image.thumb.url, class: "thumbnail logo-tiny")%>
   <% end %>
 
   <%= f.input :image, :label => t('f_company_image') %>

@@ -261,8 +261,18 @@ hr {
 }
 
 .logo-mini {
-    margin: 10px;
-    padding: 10px
+    margin: 5px;
+    padding: 5px;
+    max-width: 140px;
+    border-radius: 80%;
+}
+
+//company index
+.logo-tiny {
+    margin: 5px;
+    padding: 5px;
+    max-width: 100px;
+    border-radius: 70%;
 }
 
 //---------Footer---------
