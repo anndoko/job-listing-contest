@@ -4,16 +4,7 @@ class JobsController < ApplicationController
    before_action :validate_search_key, only: [:search]
 
   def index
-    if params[:category].present?
-        @category = params[:category]
-        if @category == t('th_all')
-          @jobs = Job.published.recent.paginate(:page => params[:page], :per_page => 5)
-        else
-          @jobs = Job.where(:is_hidden => false, :category => @category).recent.paginate(:page => params[:page], :per_page => 5)
-        end
-    else
       @jobs = Job.published.recent.paginate(:page => params[:page], :per_page => 5)
-    end
   end
 
   def show
