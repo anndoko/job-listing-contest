@@ -5,8 +5,13 @@ class Job < ApplicationRecord
   validates :wage_lower_bound, numericality: { greater_than: 0}
 
   has_many :resumes
+
+  #star
   has_many :star_relationships
   has_many :followers, through: :star_relationships, source: :user
+
+  #company
+  belongs_to :company
 
   #for map
   geocoded_by :address
@@ -24,6 +29,5 @@ class Job < ApplicationRecord
 
   scope :published, -> {  where(is_hidden: false) }
   scope :recent, -> {  order('created_at DESC') }
-  scope :company, -> { order('company') }
   scope :category, -> { order('category')}
 end

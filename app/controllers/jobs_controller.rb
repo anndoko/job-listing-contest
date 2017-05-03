@@ -19,10 +19,12 @@ class JobsController < ApplicationController
 
   def new
     @job = Job.new
+    @companies = Company.all.map { |c| [c.title, c.id] }
   end
 
   def create
     @job = Job.new(job_params)
+    @job.company_id = params[:company_id]
 
     if @job.save
       redirect_to jobs_path
@@ -33,10 +35,13 @@ class JobsController < ApplicationController
 
   def edit
     @job = Job.find(params[:id])
+    @companies = Company.all.map { |c| [c.title, c.id] }
   end
 
   def update
     @job = Job.find(params[:id])
+    @job.company_id = params[:company_id]
+
     if @job.update(job_params)
       redirect_to jobs_path
     else
@@ -84,7 +89,7 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden, :city, :company, :category, :address, :latitue, :longitude)
+    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden, :city, :category, :company_id)
   end
 
   protected

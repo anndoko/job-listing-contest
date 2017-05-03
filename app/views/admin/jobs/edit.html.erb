@@ -2,7 +2,7 @@
 
 <%= simple_form_for [:admin, @job ] do |f| %>
   <%= f.input :category, :label => t('f_category') %>
-  <%= f.input :company, :label => t('f_company') %>
+  <%= f.select :company_id, @companies %>
   <%= f.input :title, :label => t('f_title') %>
   <%= f.input :description, :label => t('f_description') %>
   <%= f.input :wage_lower_bound, :label => t('f_salary_min') %>
@@ -11,6 +11,5 @@
   <%= f.input :city, :label => t('f_city') %>
   <%= f.input :address, :label => t('f_address') %>
   <%= f.input :is_hidden, :label => t('f_job_status') %>
-
   <%= f.submit t('f_update') %>
 <% end %>
