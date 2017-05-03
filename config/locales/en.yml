@@ -91,7 +91,9 @@ en:
   # navbar dropdown menu
   starred: "Starred Jobs"
   history: "Application History"
-  admin_panel: "Admin Panel"
+  admin_access: "Admin Panel"
+  admin_panel: "Jobs"
+  company_panel: "Business Partners"
   log_out: "Log Out"
 
 #--------- search ---------
@@ -140,8 +142,15 @@ en:
   th_manage: "Manage"
   th_published: "Posted Date/Time"
   th_published: "Submitted Date/Time"
+
+  # table head
+  th_company_image: "Company Logo"
+  th_company_title: "Company Title"
+  th_company_location: "Company Location"
+
   # buttons
-  btn_add: "Add a Job"
+  btn_add: "Add New Job"
+  btn_add_company: "Add New Business Partner"
   btn_sort: "Sort"
   btn_hide: "Hide"
   btn_publish: "Publish"
@@ -154,8 +163,12 @@ en:
 
 #--------- form---------
   # form headings
-  hd_new: "Create a Job"
-  hd_edit: "Edit a Job"
+  hd_new: "Add New Job"
+  hd_edit: "Edit Job"
+
+  # form headings
+  hd_new_company: "Add New Business Parner"
+  hd_edit_company: "Edit Business Partner"
 
   # login & signup form
   f_account: "Email"
@@ -173,6 +186,9 @@ en:
   f_city: "City"
   f_email: "Contact Email"
   f_job_status: "Hidden"
+  f_company_image: "Company Logo"
+  f_company_title: "Company Title"
+  f_company_location: "Company Location"
   f_submit: "Submit"
   f_update: "Update"
   # resume form

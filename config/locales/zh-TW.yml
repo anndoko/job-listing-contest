@@ -85,7 +85,9 @@ zh-TW:
   # navbar dropdown menu
   starred: "我的收藏"
   history: "應聘紀錄"
-  admin_panel: "後台管理"
+  admin_access: "後台管理"
+  admin_panel: "工作職缺"
+  company_panel: "合作企業"
   log_out: "登出"
 
 #--------- searhc ---------
@@ -136,12 +138,16 @@ zh-TW:
   th_published: "應聘日期"
   # buttons
   btn_add: "新增職缺"
+  btn_add_company: "新增合作企業"
   btn_sort: "排序"
   btn_hide: "隱藏"
   btn_publish: "發佈"
   btn_edit: "編輯"
   btn_delete: "刪除"
-
+  # table head
+  th_company_image: "企業標誌"
+  th_company_title: "企業名稱"
+  th_company_location: "企業地點"
   # sort menu
   btn_sort_latest: "最新"
   btn_job_apply: "一鍵應聘"
@@ -150,6 +156,10 @@ zh-TW:
   # form headings
   hd_new: "新增工作"
   hd_edit: "編輯工作"
+
+  # form headings
+  hd_new_company: "新增合作企業"
+  hd_edit_company: "編輯合作企業"
 
   # login & signup form
   f_account: "電子信箱"
@@ -167,6 +177,9 @@ zh-TW:
   f_city: "城市"
   f_email: "聯絡信箱"
   f_job_status: "隱藏"
+  f_company_image: "企業標誌"
+  f_company_title: "企業名稱"
+  f_company_location: "企業地點"
   f_submit: "送交"
   f_update: "更新"
   # resume form

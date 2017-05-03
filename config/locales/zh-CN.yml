@@ -85,7 +85,9 @@ zh-CN:
   # navbar dropdown menu
   starred: "我的收藏"
   history: "应聘纪录"
-  admin_panel: "后台管理"
+  admin_access: "后台管理"
+  admin_panel: "工作职缺"
+  company_panel: "合作企业"
   log_out: "登出"
 
 #--------- search ---------
@@ -134,8 +136,13 @@ zh-CN:
   th_manage: "管理"
   th_published: "发布日期"
   th_published: "应聘日期"
+  # table head
+  th_company_image: "企业标志"
+  th_company_title: "企业名称"
+  th_company_location: "企业地点"
   # buttons
   btn_add: "新增职缺"
+  btn_add_company: "新增合作企业"
   btn_sort: "排序"
   btn_hide: "隐藏"
   btn_publish: "发布"
@@ -150,6 +157,10 @@ zh-CN:
   # form headings
   hd_new: "新增工作"
   hd_edit: "编辑工作"
+
+  # form headings
+  hd_new_company: "新增合作企业"
+  hd_edit_company: "编辑合作企业"
 
   # login & signup form
   f_account: "电子信箱"
@@ -167,6 +178,9 @@ zh-CN:
   f_city: "城市"
   f_email: "联络信箱"
   f_job_status: "隐藏"
+  f_company_image: "企业标志"
+  f_company_title: "企业名称"
+  f_company_location: "企业地点"
   f_submit: "送交"
   f_update: "更新"
   # resume form

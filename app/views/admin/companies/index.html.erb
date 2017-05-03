@@ -1,0 +1,42 @@
+<div class='pull-right admin-btn-add'>
+  <%= link_to(t('btn_add_company'), new_admin_company_path, :class => 'btn btn-sm btn-default' ) %>
+</div>
+
+<br>
+<!-- company index -->
+<table class="table table-boldered table-striped custab" >
+  <thead>
+      <tr>
+        <td><%= t('th_company_image') %></td>
+        <td><%= t('th_company_title') %></td>
+        <td><%= t('th_company_location') %></td>
+        <td><%= t('th_manage') %></td>
+      </tr>
+  </thead>
+
+  <% @companies.each do |company| %>
+    <tr>
+      <td>
+        <%= company.title %>
+      </td>
+      <td>
+        <%= company.image %>
+      </td>
+      <td>
+        <%= company.location %>
+      </td>
+      <td>
+          <%= link_to(t('btn_edit'), edit_admin_company_path(company)) %>
+          |
+          <%= link_to(t('btn_delete'), admin_company_path(company), :method => :delete, :data => { :confirm => 'Are you sure?' }) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<!-- pagination -->
+<div class="col-md-10 col-md-offset-1 job-bottom">
+	<div class="text-center">
+		<%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+	</div>
+</div>
