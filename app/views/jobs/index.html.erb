@@ -6,19 +6,11 @@
 				<section id="job-section">
 					<div class="wrapper">
 						<div class="job-section">
-							
+
 							<!--********** job logo **********-->
 							<div class="col-sm-2">
-								<% if job.company == 'Facebook' %>
-									<img class="job-logo" src='http://i.imgur.com/zVU8xTV.jpg'>
-								<% elsif job.company == 'Google'%>
-									<img class="job-logo" src='http://i.imgur.com/afZPGbL.png'>
-								<% elsif job.company == 'Amazon'%>
-									<img class="job-logo" src='http://i.imgur.com/eJwYa9C.gif'>
-								<% elsif job.company == 'Uber'%>
-									<img class="job-logo" src='http://i.imgur.com/SOnKxie.jpg'>
-								<% elsif job.company == 'Twitter'%>
-									<img class="job-logo" src='http://i.imgur.com/9qGrqGG.png'>
+								<% if job.company.image.present? %>
+									<%= image_tag(job.company.image.thumb.url, class: "thumbnail logo-mini") %>
 								<% else %>
 									<i class="logo-mini fa fa-file-text fa-fw fa-5x"  aria-hidden="true"></i>
 								<% end %>

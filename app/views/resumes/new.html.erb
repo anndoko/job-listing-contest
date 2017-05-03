@@ -15,8 +15,13 @@
         <% end %>
       </div>
       <!-- logo -->
-      <img class="job-logo" src='http://i.imgur.com/zVU8xTV.jpg'>
-
+      <!-- job logo -->
+      <% if @job.company.image.present? %>
+        <%= image_tag(@job.company.image.thumb.url, class: "job-logo") %>
+      <% else %>
+        <i class="logo-mini fa fa-file-text fa-fw fa-5x"  aria-hidden="true"></i>
+      <% end %>
+      
       <!-- title -->
       <div class="job-title">
         <%= @job.title %>

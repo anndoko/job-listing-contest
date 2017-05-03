@@ -14,29 +14,18 @@
           <% end %>
         <% end %>
       </div>
-      <!-- logo -->
+
       <!-- job logo -->
-      <% if @job.company == 'Facebook' %>
-        <img class="job-logo" src='http://i.imgur.com/zVU8xTV.jpg'>
-      <% elsif @job.company == 'Google'%>
-        <img class="job-logo" src='http://i.imgur.com/afZPGbL.png'>
-      <% elsif @job.company == 'Amazon'%>
-        <img class="job-logo" src='http://i.imgur.com/eJwYa9C.gif'>
-      <% elsif @job.company == 'Uber'%>
-        <img class="job-logo" src='http://i.imgur.com/SOnKxie.jpg'>
-      <% elsif @job.company == 'Twitter'%>
-        <img class="job-logo" src='http://i.imgur.com/9qGrqGG.png'>
+      <% if @job.company.image.present? %>
+        <%= image_tag(@job.company.image.thumb.url, class: "job-logo") %>
       <% else %>
         <i class="logo-mini fa fa-file-text fa-fw fa-5x"  aria-hidden="true"></i>
       <% end %>
-      <!-- job logo end -->
 
       <!-- title -->
       <div class="job-title">
         <%= @job.title %>
       </div>
-
-
 
       <!-- location and salary -->
       <p class="details">
