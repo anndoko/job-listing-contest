@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 
 #--------- create accounts ---------
 create_account = User.create([
@@ -26,41 +18,41 @@ create_account = User.create([
 puts 'Accounts created.'
 
 #--------- create companies ---------
-Company.create!([
+Company.create!(
   title: 'Google',
-  image: Rails.root.join('app/assets/images/google.png').open,
+  remote_image_url: ("https://ww4.sinaimg.cn/large/006tNc79gy1ff8qsdwmahj302s02sdfs.jpg"),
   location: '1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA'
-  ])
+  )
 
-Company.create!([
-  title: 'Twitter',
-  image: Rails.root.join('app/assets/images/twitter.png').open,
-  location: '1355 Market St, San Francisco, CA 94103, USA'
-  ])
+  Company.create!(
+    title: 'Twitter',
+     remote_image_url: ("https://ww1.sinaimg.cn/large/006tNc79gy1ff8qscn55lj3028028741.jpg"),
+    location: '1355 Market St, San Francisco, CA 94103, USA'
+    )
 
-Company.create!([
-  title: 'Facebook',
-  image: Rails.root.join('app/assets/images/facebook.jpg').open,
-  location: '1 Hacker Way, Menlo Park, California, CA 94025, USA'
-  ])
+  Company.create!(
+    title: 'Facebook',
+     remote_image_url: ("https://ww2.sinaimg.cn/large/006tNc79gy1ff8qse303qj302s02sgld.jpg"),
+    location: '1 Hacker Way, Menlo Park, California, CA 94025, USA'
+    )
 
-Company.create!([
-  title: 'Pinterest',
-  image: Rails.root.join('app/assets/images/pinterest.png').open,
-  location: '23 Whitestone Way, Croydon, CR0 4WF, UK'
-  ])
+  Company.create!(
+    title: 'Pinterest',
+     remote_image_url: ("https://ww2.sinaimg.cn/large/006tNc79gy1ff8qsctphfj30e80e8q34.jpg"),
+    location: '23 Whitestone Way, Croydon, CR0 4WF, UK'
+    )
 
-Company.create!([
-  title: 'Uber',
-  image: Rails.root.join('app/assets/images/uber.jpg').open,
-  location: '555 Market Street, San Francisco, CA 94105, USA'
-  ])
+  Company.create!(
+    title: 'Uber',
+     remote_image_url: ("https://ww4.sinaimg.cn/large/006tNc79gy1ff8qscfsvrj302s02s741.jpg"),
+    location: '555 Market Street, San Francisco, CA 94105, USA'
+    )
 
-Company.create!([
-  title: 'Amazon',
-  image: Rails.root.join('app/assets/images/amazon.png').open,
-  location: '207 Boren Ave N, Seattle, WA 98109, USA'
-  ])
+  Company.create!(
+    title: 'Amazon',
+     remote_image_url: ("https://ww4.sinaimg.cn/large/006tNc79gy1ff8qsdxofsj30740740sr.jpg"),
+    location: '207 Boren Ave N, Seattle, WA 98109, USA'
+    )
 
 puts 'Companies created.'
 
