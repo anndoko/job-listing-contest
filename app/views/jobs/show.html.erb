@@ -15,12 +15,24 @@
         <% end %>
       </div>
 
+
       <!-- job logo -->
-      <% if @job.company.image.present? %>
-        <%= image_tag(@job.company.image.thumb.url, class: "job-logo") %>
+      <% if @job.company.title == 'Facebook' %>
+        <img class="job-logo" src='http://i.imgur.com/zVU8xTV.jpg'>
+      <% elsif @job.company.title == 'Google'%>
+        <img class="job-logo" src='http://i.imgur.com/afZPGbL.png'>
+      <% elsif @job.company.title == 'Amazon'%>
+        <img class="job-logo" src='http://i.imgur.com/eJwYa9C.gif'>
+      <% elsif @job.company.title == 'Uber'%>
+        <img class="job-logo" src='http://i.imgur.com/SOnKxie.jpg'>
+      <% elsif @job.company.title == 'Twitter'%>
+        <img class="job-logo" src='http://i.imgur.com/9qGrqGG.png'>
+      <% elsif @job.company.title == 'Pinterest'%>
+        <img class="job-logo" src='http://i.imgur.com/Tw58Bhw.png'>
       <% else %>
         <i class="logo-mini fa fa-file-text fa-fw fa-5x"  aria-hidden="true"></i>
       <% end %>
+      <!-- job logo end -->
 
       <!-- title -->
       <div class="job-title">
