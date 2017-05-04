@@ -1,3 +1,194 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//---------Cover---------
+
+.jumbotron {
+    background-image: url("http://i.imgur.com/TCevdIZ.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 110px;
+}
+
+.container-fluid .jumbotron{
+    padding-bottom: 100px;
+    margin: 0 -15px 20px;
+    border-radius: 0;
+}
+
+.title {
+    font-family: Arial;
+    background-color: rgba(250, 250, 250, 0.39);//背景顏色含透明度
+    max-width: 700px;//最大寬度
+    margin-top: 200px;//和頂部拉開距離
+    margin-bottom: 0;//這樣就可以緊接息面的描述文字
+    border-top-right-radius: 3px;//右上角圓邊
+    border-top-left-radius: 3px;//左上角圓邊
+}
+
+.jumbotron h1, .jumbotron .h1 {
+    font-family: Arial Black;
+    text-align: justify;
+    color: #EEEEEE; //字體顏色
+    padding: 50px 20px 0;//上50px，左右20px，下0
+}
+
+.jumbotron p {
+    font-family: Arial;
+    margin: 0;//上下左右margin為0
+    font-size: 24px;//字體大小
+    max-width: 700px;//最大寬度
+    background-color: rgba(250, 250, 250, 0.39);//背景顏色含透明度
+    padding: 20px;//上下左右padding為20px
+    text-align:justify;
+    color: #EEEEEE;//字體顏色
+    border-bottom-right-radius: 3px;//右下角圓邊
+    border-bottom-left-radius: 3px;//左下角圓邊
+}
+
+.btn-danger {
+    color: #fff;//字體顏色
+    background-color: #EF6C00;//背景顏色
+    border-color: #EF6C00;//邊框顏色
+}
+
+.btn-danger:hover {
+    background-color: #E65100;//鼠標放置在btn上的背景顏色
+    border-color: #E65100;//鼠標放置在btn上的邊框顏色
+}
+
+.btn-lg, .btn-group-lg > .btn {
+    padding: 8px 16px;//通過padding來決定btn的大小
+    font-size: 20px;//btn文字大小
+    letter-spacing: 1px;//調整文字間距
+    border-radius: 3px;//btn圓角
+    width: 200px;//這裡用指定寬度把btn拉得更長
+}
+
+//---------Features---------
+.caption {
+    margin: 30px;
+    text-align: center;
+    top: 20px;
+}
+
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+    margin-top: 60px;
+}
+
+  .img-thumbnail {
+    border: 0 none;
+    width: 150px; //定製圖片寬度
+    height: 150px; //定製圖片高度
+}
+
+.content-section-a {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f8f8f8;
+}
+
+.content-section-b {
+    text-align: center;
+    padding: 5rem 0 5rem 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.section-heading {
+    font-family: Arial Black;
+    margin-bottom: 15px;
+}
+
+.lead {
+    font-family: Hectiva;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+hr {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+//---------Testomonial---------
+#testimony {
+    padding: 5rem 0 5rem 0;
+    text-align: center;
+    position: relative;
+
+    .title {
+      font-size: 2.5rem;
+      color: black;
+      margin: 0;
+      padding-bottom: 2rem;
+    }
+
+    .testimony p {
+      text-align: justify;
+      font-style: italic;
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+
+    .testimony {
+      width: 22.75%;
+      display: inline-block;
+      margin: 0 1% 0;
+      padding: 2.5rem 1.5%;
+      text-align: center;
+      -webkit-box-shadow: 0px 0px 57px 0px rgba(4,6,9,0.25);
+      -moz-box-shadow: 0px 0px 57px 0px rgba(4,6,9,0.25);
+      box-shadow: 0px 0px 57px 0px rgba(4,6,9,0.25);
+      border-radius: .35rem;
+
+      img {
+        max-width: 140px;
+        border-radius: 80%;
+      }
+    }
+
+    .button_wrapper {
+      text-align: center;
+      margin: 4rem 0;
+      display: inline-block;
+    }
+}
+
+//---------Company List---------
+.content-section-c {
+    text-align: center;
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.logo {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.logo-mini {
+    margin: 5px;
+    padding: 5px;
+    max-width: 140px;
+    border-radius: 80%;
+}
+
+//company index
+.logo-tiny {
+    margin: 5px;
+    padding: 5px;
+    max-width: 100px;
+    border-radius: 70%;
+}
