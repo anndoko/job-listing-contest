@@ -29,14 +29,17 @@
       </td>
       <td> <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %> </td>
       <td>
-          <%= link_to(t('btn_edit'), edit_admin_job_path(job)) %>
-          |
-          <%= link_to(t('btn_delete'), admin_job_path(job), :method => :delete, :data => { :confirm => 'Are you sure?' }) %>
+      <!-- edit, delete, hide/publish -->
+          <!-- edit -->
+          <%= link_to(t('btn_edit'), edit_admin_job_path(job), :class => 'btn btn-xs btn-success') %>
+          <!-- delete -->
+          <%= link_to(t('btn_delete'), admin_job_path(job), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-xs btn-danger')  %>
 
-          |
       <% if job.is_hidden %>
+          <!-- publish -->
         <%= link_to(t('btn_publish'), publish_admin_job_path(job) , :method => :post, :class => 'btn btn-xs btn-default') %>
       <% else %>
+          <!-- hide -->
         <%= link_to(t('btn_hide'), hide_admin_job_path(job), :method => :post,  :class => 'btn btn-xs btn-default') %>
           <% end %>
       </td>

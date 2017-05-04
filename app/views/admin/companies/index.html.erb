@@ -34,9 +34,7 @@
         <%= company.location %>
       </td>
       <td style="vertical-align:middle">
-          <%= link_to(t('btn_edit'), edit_admin_company_path(company)) %>
-
-          <!-- <%= link_to(t('btn_delete'), admin_company_path(company), :method => :delete, :data => { :confirm => 'Are you sure?' }) %> -->
+          <%= link_to(t('btn_edit'), edit_admin_company_path(company), :class => 'btn btn-sm btn-success') %>
       </td>
     </tr>
   <% end %>

@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 
 #--------- create accounts ---------
 create_account = User.create([
@@ -26,41 +18,35 @@ create_account = User.create([
 puts 'Accounts created.'
 
 #--------- create companies ---------
-Company.create!([
+Company.create!(
   title: 'Google',
-  image: Rails.root.join('app/assets/images/google.png').open,
   location: '1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA'
-  ])
+  )
 
-Company.create!([
-  title: 'Twitter',
-  image: Rails.root.join('app/assets/images/twitter.png').open,
-  location: '1355 Market St, San Francisco, CA 94103, USA'
-  ])
+  Company.create!(
+    title: 'Twitter',
+    location: '1355 Market St, San Francisco, CA 94103, USA'
+    )
 
-Company.create!([
-  title: 'Facebook',
-  image: Rails.root.join('app/assets/images/facebook.jpg').open,
-  location: '1 Hacker Way, Menlo Park, California, CA 94025, USA'
-  ])
+  Company.create!(
+    title: 'Facebook',
+    location: '1 Hacker Way, Menlo Park, California, CA 94025, USA'
+    )
 
-Company.create!([
-  title: 'Pinterest',
-  image: Rails.root.join('app/assets/images/pinterest.png').open,
-  location: '23 Whitestone Way, Croydon, CR0 4WF, UK'
-  ])
+  Company.create!(
+    title: 'Pinterest',
+    location: '23 Whitestone Way, Croydon, CR0 4WF, UK'
+    )
 
-Company.create!([
-  title: 'Uber',
-  image: Rails.root.join('app/assets/images/uber.jpg').open,
-  location: '555 Market Street, San Francisco, CA 94105, USA'
-  ])
+  Company.create!(
+    title: 'Uber',
+    location: '555 Market Street, San Francisco, CA 94105, USA'
+    )
 
-Company.create!([
-  title: 'Amazon',
-  image: Rails.root.join('app/assets/images/amazon.png').open,
-  location: '207 Boren Ave N, Seattle, WA 98109, USA'
-  ])
+  Company.create!(
+    title: 'Amazon',
+    location: '207 Boren Ave N, Seattle, WA 98109, USA'
+    )
 
 puts 'Companies created.'
 
