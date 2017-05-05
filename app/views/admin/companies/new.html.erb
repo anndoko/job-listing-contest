@@ -1,14 +1,18 @@
-<div class="col-md-12 form-content">
-  <h2><%= t('hd_new_company') %></h2>
-  <%= simple_form_for [:admin, @company ] do |f| %>
-    <div class="form-inputs">
-      <%= f.input :image, as: :file, :label => t('f_company_image')  %>
-      <hr/>
-      <%= f.input :title, :label => t('f_company_title') %>
-      <%= f.input :location, :label => t('f_company_location') %>
+<div class="col-md-6 col-md-offset-3 form-setup">
+  <div class="col-md-12 form-content">
+    <div class="col-md-10 col-md-offset-1">
+      <h2><%= t('hd_new_company') %></h2>
+      <%= simple_form_for [:admin, @company ] do |f| %>
+        <div class="form-inputs">
+          <%= f.input :image, as: :file, :label => t('f_company_image')  %>
+          <hr/>
+          <%= f.input :title, :label => t('f_company_title') %>
+          <%= f.input :location, :label => t('f_company_location') %>
+        </div>
+        <div class="form-actions">
+          <%= f.submit t('f_submit'), class: 'btn btn-lg btn-danger button_highlight' %>
+        </div>
+      <% end %>
     </div>
-    <div class="form-actions">
-      <%= f.submit t('f_submit'), class: 'btn btn-lg btn-danger button_highlight' %>
-    </div>
-  <% end %>
+  </div>
 </div>
