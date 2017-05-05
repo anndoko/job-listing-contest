@@ -3,6 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+//---------job information---------
+.job-information{
+    margin: 40px;
+    min-height: 550px;
+    max-width: 500px;
+    text-align: justify;
+
+    p{
+      padding: 0.5px;
+    }
+
+}
+
 
 //---------Google Map---------
 #map{
@@ -31,8 +44,8 @@
 }
 
 .admin-btn-add{
-   max-width: 300px;
-   padding-top:20px;
+    max-width: 300px;
+    padding-top:20px;
 }
 
 //---------job search---------

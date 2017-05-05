@@ -1,7 +1,30 @@
-<h1> <%= @job.title %> </h1>
-<h1> <%= @job.company.title %> </h1>
+<div class="job-information">
+  <h1> <%= @job.title %> </h1>
+  <b> <%= @job.category %> </b><br/>
 
+  <hr/>
+  <p>
+    <h3> <%= t('th_salary_range') %> </h3>
+    <i class="icon fa fa-usd fa-fx" aria-hidden="true"></i>
+    <%= @job.wage_lower_bound / 1000 %> K -
+    <%= @job.wage_upper_bound / 1000 %> K
+  </p>
 
-<p>
-  <%= simple_format(@job.description) %>
-</p>
+  <p>
+    <h3> <%= t('f_company') %> </h3>
+    <%= @job.company.title %>
+  </p>
+  <p>
+    <h3> <%= t('f_description') %> </h3>
+    <%= @job.description %>
+  </p>
+  <p>
+    <h3> <%= t('f_city') %> </h3>
+    <%= @job.city %><br/>
+    <%= @job.address %>
+  </p>
+  <p>
+    <h3> <%= t('f_email') %> </h3>
+    <%= @job.contact_email %>
+  </p>
+</div>

@@ -21,6 +21,10 @@
 @import "welcome.scss";
 @import "common.scss";
 
+hr{
+  margin:15px;
+}
+
 .form-content{
     min-height: 550px;
     min-width: 600px;
