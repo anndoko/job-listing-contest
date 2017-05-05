@@ -29,21 +29,27 @@
       </td>
       <td style="vertical-align:middle"> <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %> </td>
       <td style="vertical-align:middle">
-      <!-- edit, delete, hide/publish -->
-          <!-- edit -->
-          <%= link_to(t('btn_edit'), edit_admin_job_path(job), :class => 'btn btn-xs btn-success') %>
-          <!-- delete -->
-          <%= link_to(t('btn_delete'), admin_job_path(job), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-xs btn-danger')  %>
+            <!-- edit -->
+            <%= link_to edit_admin_job_path(job), :class => "btn btn-xs btn-success" do %>
+              <i class="fa fa-pencil-square-o fa-fw" aria-hidden="true")></i>
+            <% end %>
+            <!-- delete -->
+            <%= link_to admin_job_path(job), :method => :delete, :class => 'btn btn-xs btn-danger', :data => { :confirm => 'Are you sure?' } do %>
+              <i class="fa fa-trash-o fa-fw" aria-hidden="true")></i>
+            <% end %>
 
-      <% if job.is_hidden %>
-          <!-- publish -->
-        <%= link_to(t('btn_publish'), publish_admin_job_path(job) , :method => :post, :class => 'btn btn-xs btn-default') %>
-      <% else %>
-          <!-- hide -->
-        <%= link_to(t('btn_hide'), hide_admin_job_path(job), :method => :post,  :class => 'btn btn-xs btn-default') %>
-          <% end %>
+        <% if job.is_hidden %>
+            <!-- publish -->
+            <%= link_to publish_admin_job_path(job), :method => :post, :class => 'btn btn-xs btn-default' do %>
+              <i class="fa fa-eye fa-fw" aria-hidden="true")></i>
+            <% end %>
+        <% else %>
+            <!-- hide -->
+            <%= link_to hide_admin_job_path(job), :method => :post, :class => 'btn btn-xs btn-default' do %>
+              <i class="fa fa-eye-slash fa-fw" aria-hidden="true")></i>
+            <% end %>
+        <% end %>
       </td>
-
       <td>
           <%= job.created_at %>
       </td>

@@ -34,7 +34,9 @@
         <%= company.location %>
       </td>
       <td style="vertical-align:middle">
-          <%= link_to(t('btn_edit'), edit_admin_company_path(company), :class => 'btn btn-md btn-success button_highlight') %>
+        <%= link_to edit_admin_company_path(company), :class => "btn btn-md btn-success button_highlight" do %>
+          <i class="fa fa-pencil-square-o fa-1.5x" aria-hidden="true")></i>
+        <% end %>
       </td>
     </tr>
   <% end %>
