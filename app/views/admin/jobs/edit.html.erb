@@ -1,15 +1,28 @@
-<h1><%= t('hd_edit') %></h1>
+<div class="col-md-12 form-content">
+  <h2><%= t('hd_edit') %></h2>
+  <%= simple_form_for [:admin, @job ] do |f| %>
+    <div class="form-inputs">
+      <%= f.select :company_id, @companies %>
+      <%= f.input :title, :label => t('f_title') %>
+      <%= f.input :description, :label => t('f_description') %>
+      <hr />
+      <%= f.input :category, :label => t('f_category') %>
+      <%= f.input :wage_lower_bound, :label => t('th_salary_range') do %>
+      <br>
+        <%= f.input_field :wage_lower_bound, :as => :string, class: "wage" %>
+        <span class="wage-form">K -</span>
+        <%= f.input_field :wage_upper_bound, :as => :string, class: "wage" %>
+        <span class="wage-form">K</span>
+     <% end %>
+      <hr />
+      <%= f.input :city, :label => t('f_city') %>
+      <%= f.input :address, :label => t('f_company_location') %>
+      <%= f.input :contact_email, :label => t('f_email') %>
+      <%= f.input :is_hidden, :label => t('f_job_status') %>
+    </div>
 
-<%= simple_form_for [:admin, @job ] do |f| %>
-  <%= f.input :category, :label => t('f_category') %>
-  <%= f.select :company_id, @companies %>
-  <%= f.input :title, :label => t('f_title') %>
-  <%= f.input :description, :label => t('f_description') %>
-  <%= f.input :wage_lower_bound, :label => t('f_salary_min') %>
-  <%= f.input :wage_upper_bound, :label => t('f_salary_max') %>
-  <%= f.input :contact_email, :label => t('f_email') %>
-  <%= f.input :city, :label => t('f_city') %>
-  <%= f.input :address, :label => t('f_address') %>
-  <%= f.input :is_hidden, :label => t('f_job_status') %>
-  <%= f.submit t('f_update') %>
-<% end %>
+    <div class="form-actions">
+      <%= f.submit t('f_update'), class: 'btn btn-lg btn-danger button_highlight' %>
+    </div>
+  <% end %>
+</div>

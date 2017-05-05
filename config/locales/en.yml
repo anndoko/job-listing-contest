@@ -179,7 +179,7 @@ en:
   # edit/new form
   f_company: "Company"
   f_category: "Job Category"
-  f_title: "Job Title"
+  f_title: "Job Position"
   f_description: "Job Description"
   f_salary_min: "Salary Min."
   f_salary_max: "Salary Max."
@@ -188,7 +188,7 @@ en:
   f_job_status: "Hidden"
   f_company_image: "Company Logo"
   f_company_title: "Company Title"
-  f_company_location: "Company Location"
+  f_company_location: "Address"
   f_submit: "Submit"
   f_update: "Update"
   # resume form
