@@ -7,28 +7,28 @@
 <table class="table table-boldered table-striped custab" >
   <thead>
       <tr>
-        <th><%= t('th_company') %></th>
-        <th><%= t('th_category') %></th>
-        <th><%= t('th_position') %></th>
-        <th><%= t('th_count') %></th>
-        <th><%= t('th_manage') %></th>
-        <th><%= t('th_published') %></th>
+        <th width="30"><%= t('th_company') %></th>
+        <th width="100"><%= t('th_category') %></th>
+        <th width="150"><%= t('th_position') %></th>
+        <th width="60"><%= t('th_count') %></th>
+        <th width="100"><%= t('th_manage') %></th>
+        <th width="50"><%= t('th_published') %></th>
       </tr>
   </thead>
 
   <% @jobs.each do |job| %>
     <tr>
-      <td>
+      <td style="vertical-align:middle">
         <%= job.company.title %>
       </td>
-      <td>
+      <td style="vertical-align:middle">
         <%= job.category %>
       </td>
-      <td>
+      <td style="vertical-align:middle">
         <%= link_to(job.title, admin_job_path(job)) %>
       </td>
-      <td> <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %> </td>
-      <td>
+      <td style="vertical-align:middle"> <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %> </td>
+      <td style="vertical-align:middle">
       <!-- edit, delete, hide/publish -->
           <!-- edit -->
           <%= link_to(t('btn_edit'), edit_admin_job_path(job), :class => 'btn btn-xs btn-success') %>
